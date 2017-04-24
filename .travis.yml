@@ -3,4 +3,7 @@ jdk:
 - oraclejdk8
 - oraclejdk7
 - openjdk6
+
+- if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+bash <(curl -s https://codecov.io/bash)
 # This is a comment
